@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Gallery slider
-Plugin URI: https://bitbucket.org/kasparsj/slide-gallery
+Plugin URI: https://bitbucket.org/kasparsj/gallery-slider
 Description: Post gallery slider, with nice animation and auto height.
 Author: Kaspars Jaudzems
 Author URI: http://kasparsj.wordpress.com
@@ -100,7 +100,7 @@ function gallery_slider_post_gallery($null, $attr = array()) {
 		return $output;
 	}
     
-    wp_register_script( 'jquery.sudoSlider.min.js', plugins_url(basename(__DIR__)) . '/libs/jquery.sudoSlider.min.js', array('jquery'), '2.1.8' );
+    wp_register_script( 'jquery.sudoSlider.min.js', plugins_url('gallery-slider') . '/libs/jquery.sudoSlider.min.js', array('jquery'), '2.1.8' );
     wp_enqueue_script( 'jquery.sudoSlider.min.js' );
     add_action( 'wp_footer', 'gallery_slider_footer' );
 
