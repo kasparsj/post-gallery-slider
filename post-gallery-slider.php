@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Gallery slider
-Plugin URI: https://bitbucket.org/kasparsj/gallery-slider
-Description: Post gallery slider, with nice animation and auto height.
+Plugin Name: Post Gallery slider
+Plugin URI: https://bitbucket.org/kasparsj/post-gallery-slider
+Description: Post gallery slider, with thumbnailsm and with nice animation, and auto height.
 Author: Kaspars Jaudzems
 Author URI: http://kasparsj.wordpress.com
 Version: 1.0
@@ -12,7 +12,7 @@ if (function_exists( 'add_image_size' )) {
     add_image_size( 'gallery-thumb', 0, 60 );
 }
 
-function gallery_slider_footer() {
+function post_gallery_slider_footer() {
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
     <script type="text/javascript">
@@ -47,7 +47,7 @@ function gallery_slider_footer() {
     }
 }
 
-function gallery_slider_post_gallery($null, $attr = array()) {
+function post_gallery_slider($null, $attr = array()) {
 	global $post;
 
 	static $instance = 0;
@@ -102,7 +102,7 @@ function gallery_slider_post_gallery($null, $attr = array()) {
     
     wp_register_script( 'jquery.sudoSlider.min.js', plugins_url('gallery-slider') . '/libs/jquery.sudoSlider.min.js', array('jquery'), '2.1.8' );
     wp_enqueue_script( 'jquery.sudoSlider.min.js' );
-    add_action( 'wp_footer', 'gallery_slider_footer' );
+    add_action( 'wp_footer', 'post_gallery_slider_footer' );
 
 	$itemtag = tag_escape($itemtag);
 	$captiontag = tag_escape($captiontag);
@@ -152,6 +152,6 @@ function gallery_slider_post_gallery($null, $attr = array()) {
 
 	return $output;
 }
-add_filter( 'post_gallery', 'gallery_slider_post_gallery', 10, 2 );
+add_filter( 'post_gallery', 'post_gallery_slider', 10, 2 );
 
 ?>
