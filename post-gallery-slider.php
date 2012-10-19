@@ -100,7 +100,7 @@ function post_gallery_slider($null, $attr = array()) {
 		return $output;
 	}
     
-    wp_register_script( 'jquery.sudoSlider.js', plugins_url('gallery-slider') . '/libs/jquery.sudoSlider.js', array('jquery'), '2.1.8' );
+    wp_register_script( 'jquery.sudoSlider.js', plugins_url('post-gallery-slider') . '/libs/jquery.sudoSlider.js', array('jquery'), '2.1.8' );
     wp_enqueue_script( 'jquery.sudoSlider.js' );
     add_action( 'wp_footer', 'post_gallery_slider_footer' );
 
