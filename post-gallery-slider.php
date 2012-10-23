@@ -107,7 +107,11 @@ function post_gallery_slider($null, $attr = array()) {
     </style>";
 	$gallery_div = "<div id='$selector' class='gallery galleryid-{$id}'>";
 	$output  = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
-    $output .= ($options["thumb_pos"] == "before" ? $thumbs_div.$slider_div : $slider_div.$thumbs_div);
+    if ($options["show_thumbs"] == "before")
+        $output .= $thumbs_div;
+    $output .= $slider_div;
+    if ($options["show_thumbs"] == "after")
+        $output .= $thumbs_div;
 	$output .= "</div>\n";
     
 	return $output;
@@ -160,10 +164,10 @@ function post_gallery_slider_init() {
             "size" => "large",
             "width" => 650,
             "height" => 0,
+            "show_thumbs" => "before",
             "thumb_size" => "thumbnail",
             "thumb_width" => 0,
             "thumb_height" => 60,
-            "thumb_pos" => "before",
             "gallery_css" => ".gallery { overflow: visible }
 .gallery-thumbs ul, .gallery-thumbs ul li { list-style: none; }
 .gallery-thumbs ul li { float: left; margin: -3px 7px 7px -3px; line-height: 0 }
@@ -240,6 +244,16 @@ function post_gallery_slider_settings_page() {
                     </td>
                 </tr>
                 <tr valign="top">
+                    <th scope="row"><label for="post_gallery_slider_show_thumbs">Show thumbnails:</label></th>
+                    <td>
+                        <select id="post_gallery_slider_show_thumbs" name="post_gallery_slider[show_thumbs]">
+                            <option value="before"<?php echo $options["show_thumbs"] == "before" ? ' selected="selected"' : '' ?>>Before slider</option>
+                            <option value="after"<?php echo $options["show_thumbs"] == "after" ? ' selected="selected"' : '' ?>>After slider</option>
+                            <option value=""<?php echo $options["show_thumbs"] == "" ? ' selected="selected"' : '' ?>>Do not show</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr valign="top" id="post_gallery_slider_thumb_size_row"<?php echo $options["show_thumbs"] == "" ? ' style="display:none"' : '' ?>>
                     <th scope="row"><label for="post_gallery_slider_thumb_size">Thumbnails size:</label></th>
                     <td>
                         <select id="post_gallery_slider_thumb_size" name="post_gallery_slider[thumb_size]">
@@ -249,22 +263,13 @@ function post_gallery_slider_settings_page() {
                         </select>
                         &nbsp;
                         <span id="post_gallery_slider_thumb_size_custom"<?php echo $options["thumb_size"] != "gallery-thumb" ? ' style="display:none"' : ''?>>
-                            <label for="post_gallery_slider_thumb_width">Width:</label> <input id="post_gallery_slider_thumb_width" name="post_gallery_slider[thumb_width]" size="4" type="text" value="<?php echo $options["thumb_width"] ?>">
-                            <label for="post_gallery_slider_thumb_height">Height:</label> <input id="post_gallery_slider_thumb_height" name="post_gallery_slider[thumb_height]" size="4" type="text" value="<?php echo $options["thumb_height"] ?>">
+                            <label for="post_gallery_slider_thumb_width">Width:</label> <input id="post_gallery_slider_thumb_width" name="post_gallery_slider[thumb_width]" size="4" type="text" value="<?php echo $options["thumb_width"] ?>" />
+                            <label for="post_gallery_slider_thumb_height">Height:</label> <input id="post_gallery_slider_thumb_height" name="post_gallery_slider[thumb_height]" size="4" type="text" value="<?php echo $options["thumb_height"] ?>" />
                         </span>
                     </td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row"><label for="post_gallery_slider_thumb_width">Thumbnails position:</label></th>
-                    <td>
-                        <select id="post_gallery_slider_thumb_pos" name="post_gallery_slider[thumb_pos]">
-                            <option value="before"<?php echo $options["thumb_pos"] == "before" ? ' selected="selected"' : '' ?>>Before slider</option>
-                            <option value="after"<?php echo $options["thumb_pos"] == "after" ? ' selected="selected"' : '' ?>>After slider</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label for="post_gallery_slider_gallery_css">Gallery CSS:</label></th>
+                    <th scope="row"><label for="post_gallery_slider_gallery_css">Post gallery slider CSS:</label></th>
                     <td><textarea id="post_gallery_slider_gallery_css" name="post_gallery_slider[gallery_css]" rows="7" cols="95"><?php echo $options["gallery_css"] ?></textarea></td>
                 </tr>
                 <tr valign="top">
@@ -283,6 +288,14 @@ function post_gallery_slider_settings_page() {
                 $("#post_gallery_slider_size_custom").show();
             else
                 $("#post_gallery_slider_size_custom").hide();
+        });
+        $("#post_gallery_slider_show_thumbs").change(function() {
+            if (this.value == "") {
+                $("#post_gallery_slider_thumb_size_row").hide();
+            }
+            else {
+                $("#post_gallery_slider_thumb_size_row").show();
+            }
         });
         $("#post_gallery_slider_thumb_size").change(function() {
             if (this.value == "gallery-thumb")
