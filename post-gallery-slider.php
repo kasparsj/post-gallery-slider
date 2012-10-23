@@ -233,7 +233,7 @@ function post_gallery_slider_settings_page() {
                             <?php endforeach; ?>
                         </select>
                         &nbsp;
-                        <span id="post_gallery_slider_size_custom"<?php echo $options["size"] != "custom" ? ' style="display:none"' : ''?>>
+                        <span id="post_gallery_slider_size_custom"<?php echo $options["size"] != "gallery-image" ? ' style="display:none"' : ''?>>
                             <label for="post_gallery_slider_width">Width:</label> <input id="post_gallery_slider_width" name="post_gallery_slider[width]" size="4" type="text" value="<?php echo $options["width"] ?>">
                             <label for="post_gallery_slider_height">Height:</label> <input id="post_gallery_slider_height" name="post_gallery_slider[height]" size="4" type="text" value="<?php echo $options["height"] ?>">
                         </span>
@@ -248,7 +248,7 @@ function post_gallery_slider_settings_page() {
                             <?php endforeach; ?>
                         </select>
                         &nbsp;
-                        <span id="post_gallery_slider_thumb_size_custom"<?php echo $options["thumb_size"] != "custom" ? ' style="display:none"' : ''?>>
+                        <span id="post_gallery_slider_thumb_size_custom"<?php echo $options["thumb_size"] != "gallery-thumb" ? ' style="display:none"' : ''?>>
                             <label for="post_gallery_slider_thumb_width">Width:</label> <input id="post_gallery_slider_thumb_width" name="post_gallery_slider[thumb_width]" size="4" type="text" value="<?php echo $options["thumb_width"] ?>">
                             <label for="post_gallery_slider_thumb_height">Height:</label> <input id="post_gallery_slider_thumb_height" name="post_gallery_slider[thumb_height]" size="4" type="text" value="<?php echo $options["thumb_height"] ?>">
                         </span>
