@@ -12,6 +12,12 @@ Post gallery slider, with thumbnails and with nice animation, and auto height.
 
 == Description ==
 
+*Features*
+
+* Configurable image/thumbnail size, set custom size
+* Show thumbnails before/after slider, or do not show them at all
+* Fully editable CSS
+
 This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQuery. 
 
 [Demo](http://not-tom.com/projects/old-toms-lemonade/)
