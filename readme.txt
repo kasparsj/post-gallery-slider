@@ -1,6 +1,6 @@
 === Post gallery slider ===
 Contributors: kasparsj@gmail.com
-Donate link: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=53WLQWY9HJ4X4
 Tags: Post gallery, slider, gallery thumbnails, slideshow
 Requires at least: 2.5
 Tested up to: 3.4
@@ -13,6 +13,8 @@ Post gallery slider, with thumbnails and with nice animation, and auto height.
 == Description ==
 
 This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQuery. 
+
+[Demo](http://not-tom.com/projects/old-toms-lemonade/)
 
 == Installation ==
 
