@@ -28,9 +28,9 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Screenshots ==
 
-1. screenshot-1.jpg
-2. screenshot-2.jpg
-3. screenshot-3.jpg
+1. Post slider gallery with thumbnails
+2. Post slider gallery while animating
+3. Admin options
 
 == Changelog ==
 
