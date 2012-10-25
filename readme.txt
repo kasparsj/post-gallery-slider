@@ -27,15 +27,20 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 1. Upload `post-gallery-slider` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Optionally change plugin options in Settings -> Post Gallery Slider
-4. See FAQ section on how to insert a gallery into a post or page
+4. See FAQ section on how configure and insert the slider into a post or page
 
 == Frequently asked questions ==
 
-= To insert the slider in a post or page: =
+= How to insert the slider in a post or page? =
 1. From inside a post/page click on Upload/Insert (Add Media button).
 2. Upload images
 3. Select the Gallery tab
 4. Click on Insert gallery
+
+= How to configure the slider exactly like on the Demo page? =
+1. Go into Settings -> Post Gallery Slider
+2. Select Thumbnail size: Custom
+3. Enter Height: 60
 
 == Screenshots ==
 
