@@ -27,6 +27,7 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 1. Upload `post-gallery-slider` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Optionally change plugin options in Settings -> Post Gallery Slider
+4. See FAQ section on how to insert a gallery into a post or page
 
 == Frequently asked questions ==
 
