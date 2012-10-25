@@ -30,7 +30,11 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Frequently asked questions ==
 
-
+= To insert the slider in a post or page: =
+1. From inside a post/page click on Upload/Insert (Add Media button).
+2. Upload images
+3. Select the Gallery tab
+4. Click on Insert gallery
 
 == Screenshots ==
 
