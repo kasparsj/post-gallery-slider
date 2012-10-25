@@ -41,6 +41,7 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 1. Go into Settings -> Post Gallery Slider
 2. Select Thumbnail size: Custom
 3. Enter Height: 60
+4. Click Save changes
 
 == Screenshots ==
 
