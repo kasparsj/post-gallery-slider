@@ -51,7 +51,7 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Changelog ==
 
-1.0.1 Changed "post_galler" filter priority to 1001, to be run after theme filter
+1.0.1 Changed "post_gallery" filter priority to 1001, to be run after theme filter
 1.0 Initial release
 
 == Upgrade notice ==
