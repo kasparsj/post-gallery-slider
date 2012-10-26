@@ -116,7 +116,7 @@ function post_gallery_slider($null, $attr = array()) {
     
 	return $output;
 }
-add_filter( 'post_gallery', 'post_gallery_slider', 10, 2 );
+add_filter( 'post_gallery', 'post_gallery_slider', 1001, 2 );
 
 function post_gallery_slider_footer() {
     if( wp_script_is( 'jquery', 'done' ) ) {
