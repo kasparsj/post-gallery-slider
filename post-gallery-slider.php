@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Post gallery slider
-Plugin URI: https://bitbucket.org/kasparsj/post-gallery-slider
+Plugin URI: http://github.com/kasparsj/post-gallery-slider
 Description: Post gallery slider, with thumbnails and with nice animation, and auto height.
 Author: Kaspars Jaudzems
 Author URI: http://kasparsj.wordpress.com
