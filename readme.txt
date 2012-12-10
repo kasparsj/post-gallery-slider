@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Post gallery, slider, gallery thumbnails, slideshow
 Requires at least: 2.5
 Tested up to: 3.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,7 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Changelog ==
 
+1.0.2 Bugfixes: not applying "gallery_style" filter anymore; using jQuery instead of $.
 1.0.1 Changed "post_gallery" filter priority to 1001, to be run after theme filter
 1.0 Initial release
 

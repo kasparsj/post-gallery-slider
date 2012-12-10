@@ -106,7 +106,7 @@ function post_gallery_slider($null, $attr = array()) {
         {$options['gallery_css']}
     </style>";
 	$gallery_div = "<div id='$selector' class='gallery galleryid-{$id}'>";
-	$output  = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
+	$output  = $gallery_style . "\n" . $gallery_div;
     if ($options["show_thumbs"] == "before")
         $output .= $thumbs_div;
     $output .= $slider_div;
@@ -122,7 +122,7 @@ function post_gallery_slider_footer() {
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
     <script type="text/javascript">
-        $(document).ready(function() {
+        jQuery(document).ready(function($) {
            if (typeof $.fn.sudoSlider != "undefined") {
                 $(".gallery").each(function() {
                     var gal = this;
