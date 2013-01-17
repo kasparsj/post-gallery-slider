@@ -8,6 +8,9 @@ Author URI: http://kasparsj.wordpress.com
 Version: 1.0.4
  */
 
+// Exit if accessed directly
+if( !defined( 'ABSPATH' ) ) exit;
+
 class PostGallerySlider {
     
     static protected $instance = 0;
