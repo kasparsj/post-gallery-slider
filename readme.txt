@@ -51,10 +51,20 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Changelog ==
 
-1.0.3 Fixed for WordPress 3.5
-1.0.2 Bugfixes: not applying "gallery_style" filter anymore; using jQuery instead of $.
-1.0.1 Changed "post_gallery" filter priority to 1001, to be run after theme filter
-1.0 Initial release
+=1.0.4=
+Refactoring release
+
+=1.0.3=
+Updated for WordPress 3.5
+
+=1.0.2=
+Bugfixes: not applying "gallery_style" filter anymore; using jQuery instead of $.
+
+=1.0.1=
+Changed "post_gallery" filter priority to 1001, to be run after theme filter
+
+=1.0=
+Initial release
 
 == Upgrade notice ==
 
