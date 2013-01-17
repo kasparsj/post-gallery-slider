@@ -3,6 +3,5 @@
 .gallery-thumbs ul li { float: left; margin: -3px 7px 7px -3px; line-height: 0 }
 .gallery-thumbs ul li a { display: block; padding: 2px; border: 1px solid transparent }
 .gallery-thumbs ul li a:hover, .gallery-thumbs ul li a.active { border: 1px solid #CCC; }
-.gallery-slider { overflow: hidden }
 .gallery-slider ul, .gallery-slider ul li { margin:0; padding: 0; list-style: none; position: relative; overflow: hidden; display: block; }
 .gallery-slider ul li img { border: 0 }

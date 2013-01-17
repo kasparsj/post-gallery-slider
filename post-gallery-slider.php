@@ -29,11 +29,11 @@ class PostGallerySlider {
     public function __construct() {
         add_action('init', array($this, 'init'));
         add_action('admin_init', array($this, 'admin_init'));
-        add_action('admin_menu', array($this, 'amin_menu'));
-        add_filter('post_gallery', array($this, 'gallery'), 1001, 2);
+        add_action('admin_menu', array($this, 'admin_menu'));
+        add_filter('post_gallery', array($this, 'post_gallery'), 1001, 2);
     }
     
-    protected function init() {
+    public function init() {
         $this->options = get_option('post_gallery_slider');
     
         if (($this->options['restore'] == 'on') || (!is_array($this->options))) {
@@ -58,15 +58,15 @@ class PostGallerySlider {
         }
     }
     
-    protected function admin_init() {
+    public function admin_init() {
         register_setting('post_gallery_slider', 'post_gallery_slider', array($this, 'validate_options'));
     }
     
-    protected function admin_menu() {
+    public function admin_menu() {
         add_options_page('Post Gallery Slider', 'Post Gallery Slider', 'manage_options', 'post_gallery_slider', array($this, 'options_page'));
     }
     
-    protected function gallery($null, $attr = array()) {
+    public function post_gallery($null, $attr = array()) {
         global $post;
 
         // We're trusting author input, so let's at least make sure it looks like a valid orderby statement
@@ -128,7 +128,7 @@ class PostGallerySlider {
         //$float = is_rtl() ? 'right' : 'left';
 
         $first_image = wp_get_attachment_image_src(key($attachments), $size, true);
-        return include_template("gallery.php", array(
+        return $this->include_template("gallery.php", array(
             'id' => $id,
             'size' => $size,
             'thumb_size' => $thumb_size,
@@ -140,18 +140,18 @@ class PostGallerySlider {
         ), true);
     }
     
-    protected function footer() {
+    public function footer() {
         if( wp_script_is( 'jquery', 'done' ) ) {
-            include_template("footer.php");
+            $this->include_template("footer.php");
         }
     }
     
-    protected function validate_options($input) {
+    public function validate_options($input) {
         return $input;
     }
     
-    protected function options_page() {
-        include_template("options-page.php", array(
+    public function options_page() {
+        $this->include_template("options-page.php", array(
             'options' => $this->options,
             'sizes' => $this->sizes,
             'thumb_sizes' => $this->thumb_sizes

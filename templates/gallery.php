@@ -1,5 +1,5 @@
 <style type="text/css">
-    .gallery-slider { width: <?=$width?>px; height: <?=$height?>px; }
+    .gallery-slider { overflow: hidden; width: <?=$width?>px; height: <?=$height?>px; }
     <?=$options['gallery_css']?>
 </style>
 <div id="gallery-<?=$instance?>" class="gallery galleryid-<?=$id?>">
