@@ -1,18 +1,3 @@
-<?php
-$options = get_option("post_gallery_slider");
-$sizes = array(
-    "large" => "large", 
-    "medium" => "medium", 
-    "gallery-image" => "custom", 
-    "full" => "full (not recommended)", 
-    "thumbnail" => "thumbnail (not recommended)");
-$thumb_sizes = array(
-    "thumbnail" => "thumbnail",
-    "medium" => "medium",
-    "gallery-thumb" => "custom",
-    "large" => "large (not recommended)",
-    "full" => "full (not recommended)");
-?>
 <div class="wrap">
     <div class="icon32" id="icon-options-general"><br></div>
     <h2>Post Gallery Slider</h2>

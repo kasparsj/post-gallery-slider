@@ -1,4 +1,3 @@
-<?php list($src, $width, $height) = wp_get_attachment_image_src(key($attachments), $size, true); ?>
 <style type="text/css">
     .gallery-slider { width: <?=$width?>px; height: <?=$height?>px; }
     <?=$options['gallery_css']?>
