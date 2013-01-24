@@ -48,7 +48,7 @@ class PostGallerySlider {
                 "thumb_size" => "thumbnail",
                 "thumb_width" => 0,
                 "thumb_height" => 60,
-                "gallery_css" => file_get_contents("css/gallery.css"),
+                "gallery_css" => file_get_contents(__DIR__."/css/gallery.css"),
             );
             update_option('post_gallery_slider', $this->options);
         }
