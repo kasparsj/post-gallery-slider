@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Post gallery, slider, gallery thumbnails, slideshow
 Requires at least: 2.5
 Tested up to: 3.5
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 3. Admin options
 
 == Changelog ==
+
+= 1.0.5 =
+Hotfix release
 
 = 1.0.4 =
 Refactoring release
