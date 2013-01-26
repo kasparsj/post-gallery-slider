@@ -15,12 +15,15 @@
                         $(".gallery-thumbs a:eq("+(t-1)+")", gal).addClass("active");
                     }
                 });
-                $(".gallery-thumbs a", gal).click(function() {
+                $(".gallery-thumbs a", gal).click(function(event) {
+                    event.preventDefault();
                     sudoSlider.goToSlide(($(this).parent().index()+1))
                     return false;
                 });
-                $(".gallery-slider img", gal).click(function() {
+                $(".gallery-slider img", gal).click(function(event) {
+                    event.preventDefault();
                     sudoSlider.goToSlide("next");
+                    return false;
                 });
             });
         } 
