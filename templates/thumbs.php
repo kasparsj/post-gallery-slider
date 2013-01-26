@@ -1,8 +1,6 @@
 <div class="gallery-thumbs">
-    <ul>
 <?php foreach ( $attachments as $id => $attachment ) : ?>
-        <li><?=isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $thumb_size, false, false) : wp_get_attachment_link($id, $thumb_size, true, false)?></li>
+    <<?=$itemtag?> class="gallery-item"><?=isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $thumb_size, false, false) : wp_get_attachment_link($id, $thumb_size, true, false)?></<?=$itemtag?>>
 <?php endforeach; ?>
-    </ul>
-    <div style='clear:both'></div>
+    <br style="clear:both" />
 </div>

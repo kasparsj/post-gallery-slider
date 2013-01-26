@@ -83,6 +83,9 @@ class PostGallerySlider {
             'order'      => 'ASC',
             'orderby'    => 'menu_order ID',
             'id'         => $post->ID,
+            'itemtag'    => 'dl',
+            'icontag'    => 'dt',
+            'captiontag' => 'dd',
             'columns'    => 3,
             'size'       => $this->options["size"],
             'thumb_size' => $this->options["thumb_size"],
@@ -124,8 +127,8 @@ class PostGallerySlider {
         add_action( 'wp_footer', array($this, 'footer'), 10000 );
 
         // NOT USED ATM
-        //$itemtag = tag_escape($itemtag);
-        //$captiontag = tag_escape($captiontag);
+        $itemtag = tag_escape($itemtag);
+        $captiontag = tag_escape($captiontag);
         //$columns = intval($columns);
         //$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
         //$float = is_rtl() ? 'right' : 'left';
@@ -133,6 +136,7 @@ class PostGallerySlider {
         $first_image = wp_get_attachment_image_src(key($attachments), $size, true);
         return $this->include_template("gallery.php", array(
             'id' => $id,
+            'itemtag' => $itemtag,
             'size' => $size,
             'thumb_size' => $thumb_size,
             'attachments' => $attachments,

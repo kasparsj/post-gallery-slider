@@ -1,7 +1,6 @@
 .gallery { overflow: visible }
-.gallery-thumbs ul, .gallery-thumbs ul li { list-style: none; }
-.gallery-thumbs ul li { float: left; margin: -3px 7px 7px -3px; line-height: 0 }
-.gallery-thumbs ul li a { display: block; padding: 2px; border: 1px solid transparent }
-.gallery-thumbs ul li a:hover, .gallery-thumbs ul li a.active { border: 1px solid #CCC; }
-.gallery-slider ul, .gallery-slider ul li { margin:0; padding: 0; list-style: none; position: relative; overflow: hidden; display: block; }
-.gallery-slider ul li img { border: 0 }
+.gallery-thumbs .gallery-item { float: left; margin: -3px 7px 7px -3px; line-height: 0 }
+.gallery-thumbs .gallery-item a { display: block; padding: 2px; border: 1px solid transparent }
+.gallery-thumbs .gallery-item a:hover, .gallery-thumbs .gallery-item a.active { border: 1px solid #CCC; }
+.gallery-slider { position: relative; overflow: hidden; }
+.gallery-slider .gallery-item img { border: 0 }
