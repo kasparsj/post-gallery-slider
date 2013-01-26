@@ -51,6 +51,9 @@ This plugin is uses SudoSlider (http://webbies.dk/SudoSlider/) and requires jQue
 
 == Changelog ==
 
+= 1.0.6 =
+Hotfix release
+
 = 1.0.5 =
 Hotfix release
 
