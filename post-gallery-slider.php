@@ -5,7 +5,7 @@ Plugin URI: http://github.com/kasparsj/post-gallery-slider
 Description: Post gallery slider, with thumbnails and with nice animation, and auto height.
 Author: Kaspars Jaudzems
 Author URI: http://kasparsj.wordpress.com
-Version: 1.0.5
+Version: 1.0.6
  */
 
 // Exit if accessed directly
@@ -119,8 +119,8 @@ class PostGallerySlider {
             return $output;
         }
 
-        wp_register_script( 'jquery.sudoSlider.js', plugins_url('post-gallery-slider') . '/js/jquery.sudoSlider.js', array('jquery'), '2.1.8' );
-        wp_enqueue_script( 'jquery.sudoSlider.js' );
+        wp_register_script( 'jquery.sudoSlider.min.js', plugins_url('post-gallery-slider') . '/js/jquery.sudoSlider.min.js', array('jquery'), '2.2.8' );
+        wp_enqueue_script( 'jquery.sudoSlider.min.js' );
         add_action( 'wp_footer', array($this, 'footer'), 10000 );
 
         // NOT USED ATM
@@ -161,7 +161,7 @@ class PostGallerySlider {
         ));
     }
     
-    protected function include_template($template, $vars, $return = false) {
+    protected function include_template($template, $vars = array(), $return = false) {
         if ($return) ob_start();
         extract($vars);
         include("templates/".$template);
