@@ -39,7 +39,7 @@ class PostGallerySlider {
     public function init() {
         $this->options = get_option('post_gallery_slider');
     
-        if (($this->options['restore'] == 'on') || (!is_array($this->options))) {
+        if ((@$this->options['restore'] == 'on') || (!is_array($this->options))) {
             $this->options = array(
                 "size" => "large",
                 "width" => 650,
@@ -119,7 +119,7 @@ class PostGallerySlider {
             return $output;
         }
 
-        wp_register_script( 'jquery.sudoSlider.min.js', plugins_url('post-gallery-slider') . '/js/jquery.sudoSlider.min.js', array('jquery'), '2.2.8' );
+        wp_register_script( 'jquery.sudoSlider.min.js', plugins_url('post-gallery-slider') . '/js/jquery.sudoSlider.min.js', array('jquery'), '3.0.1' );
         wp_enqueue_script( 'jquery.sudoSlider.min.js' );
         add_action( 'wp_footer', array($this, 'footer'), 10000 );
 
