@@ -6,11 +6,11 @@
                 var sudoSlider = $(".gallery-slider", gal).show().sudoSlider({
                     prevNext: false,
                     continuos: true,
-                    beforeAniFunc: function(t) {
+                    initCallback: function() {
                         $(".gallery-thumbs a", gal).removeClass("active");
-                        $(".gallery-thumbs a:eq("+(t-1)+")", gal).addClass("active");
+                        $(".gallery-thumbs a:first", gal).addClass("active");
                     },
-                    afterAniFunc: function(t) {
+                    afteranimation: function(t) {
                         $(".gallery-thumbs a", gal).removeClass("active");
                         $(".gallery-thumbs a:eq("+(t-1)+")", gal).addClass("active");
                     }
