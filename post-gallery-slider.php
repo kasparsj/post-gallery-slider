@@ -5,7 +5,7 @@ Plugin URI: http://github.com/kasparsj/post-gallery-slider
 Description: Post gallery slider, with thumbnails and with nice animation, and auto height.
 Author: Kaspars Jaudzems
 Author URI: http://kasparsj.wordpress.com
-Version: 1.0.8
+Version: 1.1
  */
 
 // Exit if accessed directly
@@ -47,8 +47,7 @@ class PostGallerySlider {
                 "show_thumbs" => "before",
                 "thumb_size" => "thumbnail",
                 "thumb_width" => 0,
-                "thumb_height" => 60,
-                "gallery_css" => file_get_contents(__DIR__."/css/gallery.css"),
+                "thumb_height" => 60
             );
             update_option('post_gallery_slider', $this->options);
         }
@@ -131,6 +130,7 @@ class PostGallerySlider {
         //$float = is_rtl() ? 'right' : 'left';
 
         $first_image = wp_get_attachment_image_src(key($attachments), $size, true);
+        $instance = ++self::$instance;
         return $this->include_template("gallery.php", array(
             'id' => $id,
             'size' => $size,
@@ -138,8 +138,9 @@ class PostGallerySlider {
             'attachments' => $attachments,
             'width' => $first_image[1],
             'height' => $first_image[2],
-            'instance' => ++self::$instance,
-            'options' => $this->options
+            'instance' => $instance,
+            'options' => $this->options,
+            'css' => str_replace('#gallery', '#gallery-'.$instance, file_get_contents(__DIR__."/css/gallery.css"))
         ), true);
     }
     

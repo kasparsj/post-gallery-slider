@@ -49,12 +49,12 @@
                     </td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row"><label for="post_gallery_slider_gallery_css">Post gallery slider CSS:</label></th>
-                    <td><textarea id="post_gallery_slider_gallery_css" name="post_gallery_slider[gallery_css]" rows="7" cols="95"><?php echo $options["gallery_css"] ?></textarea></td>
-                </tr>
-                <tr valign="top">
                     <th scope="row"><label for="post_gallery_slider_restore">Restore defaults:</label></th>
                     <td><input id="post_gallery_slider_restore" name="post_gallery_slider[restore]" type="checkbox" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">Customize:</th>
+                    <td><a href="<?php echo admin_url("plugin-editor.php?file=post-gallery-slider%2Fcss%2Fgallery.css&plugin=post-gallery-slider%2Fpost-gallery-slider.php")?>">Edit CSS</a></td>
                 </tr>
             </tbody>
         </table>

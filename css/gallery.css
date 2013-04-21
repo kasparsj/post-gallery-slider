@@ -1,7 +1,9 @@
-.gallery { overflow: visible }
-.gallery-thumbs ul, .gallery-thumbs ul li { list-style: none; margin: 0; }
-.gallery-thumbs ul li { float: left; margin: -3px 7px 7px -3px; line-height: 0 }
-.gallery-thumbs ul li a { display: block; padding: 2px; border: 1px solid transparent }
-.gallery-thumbs ul li a:hover, .gallery-thumbs ul li a.active { border: 1px solid #CCC; }
-.gallery-slider ul, .gallery-slider ul li { margin:0; padding: 0; list-style: none; position: relative; overflow: hidden; display: block; }
-.gallery-slider ul li img { border: 0 }
+#gallery { overflow: visible }
+#gallery .gallery-thumbs ul, #gallery .gallery-thumbs ul li { list-style: none; margin: 0; }
+#gallery .gallery-thumbs .gallery-item { float: left; margin: -3px 7px 7px -3px; line-height: 0; width: auto; }
+#gallery .gallery-thumbs a { display: block; padding: 2px; border: 1px solid transparent }
+#gallery .gallery-thumbs a:hover, #gallery .gallery-thumbs a.active { border: 1px solid #CCC; }
+#gallery .gallery-thumbs img { margin: 0 }
+#gallery .gallery-slider ul, #gallery .gallery-slider ul li { margin:0; padding: 0; list-style: none; position: relative; overflow: hidden; display: block; }
+#gallery .gallery-slider .gallery-item { width: auto }
+#gallery .gallery-slider img { border: 0; margin: 0 }
