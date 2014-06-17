@@ -11,6 +11,8 @@ Version: 1.1
 // Exit if accessed directly
 if( !defined( 'ABSPATH' ) ) exit;
 
+define('POST_GALLERY_SLIDER_DIR', dirname(__FILE__));
+
 class PostGallerySlider {
     
     static protected $instance = 0;
@@ -140,7 +142,7 @@ class PostGallerySlider {
             'height' => $first_image[2],
             'instance' => $instance,
             'options' => $this->options,
-            'css' => str_replace('#gallery', '#gallery-'.$instance, file_get_contents(__DIR__."/css/gallery.css"))
+            'css' => str_replace('#gallery', '#gallery-'.$instance, file_get_contents(POST_GALLERY_SLIDER_DIR."/css/gallery.css"))
         ), true);
     }
     
